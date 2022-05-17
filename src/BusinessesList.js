@@ -1,10 +1,10 @@
-import PokemonItem from './PokemonItem';
+import BusinessItem from './BusinessItem';
 
-export default function PokemonList(pokemonList) {
+export default function BusinessList(businessList) {
   return (
     <div className='list'>
       { 
-        pokemonList.map(pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon} />
+        businessList.map(business => <BusinessItem key={business.id} business={business} />
         )
       }
     </div>

@@ -1,12 +1,10 @@
-import PokemonItem from './PokemonItem';
-
-export default function PokemonList(pokemonList) {
+export default function BusinessItem(businessItem) {
   return (
-    <div className='list'>
-      { 
-        pokemonList.map(pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon} />
-        )
-      }
+    <div className='business item'>
+      <h2>{businessItem.name}</h2>
+      <p>{businessItem.price}</p>
+      <p>{businessItem.phone}</p>
+      <img src={businessItem.image_url} /> 
     </div>
   );
 }

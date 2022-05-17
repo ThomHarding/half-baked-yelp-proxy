@@ -7,14 +7,11 @@ export default function PokemonSearch() {
   const [pokemonSearch, setPokemonSearch] = useState([]);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('pikachu');
-  const [country, setCountry] = useState('');
-  const [state, setState] = useState('');
       // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
 
   async function load() {
     const { data: { results } } = await getPokemon(name);
     setPokemonSearch(results);
-    console.log(results);
         // put the jsonified data in state and set the loading state to false
     setLoading(false);
   }
@@ -37,8 +34,6 @@ export default function PokemonSearch() {
       <form onSubmit={handlePokemonSubmit}>
         Search pokemon for a city
         <input value={name} onChange={e => setName(e.target.value)}/>
-        <input value={state} onChange={e => setCountry(e.target.value)}/>
-        <input value={country} onChange={e => setState(e.target.value)}/>
         {/* add inputs/labels for city name, state, and country, using all the things we need with react forms. Don't forget to use the value property to sync these up with the default values in react state */}
         <button>Get pokemon</button>
       </form>
