@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Spinner from './Spinner';
 import { getYelpData } from './services/fetch-utils';
-import BusinessList from './businessesList.js';
+import BusinessList from './BusinessesList.js';
 
 export default function YelpSearch() {
   const [yelpSearch, setYelpSearch] = useState([]);
