@@ -22,6 +22,18 @@
   }
 }
 
+.yelp {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
