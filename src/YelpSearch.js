@@ -14,7 +14,7 @@ export default function YelpSearch() {
   async function load() {
     const results = await getYelpData(cityName);
     setYelpSearch(results.data.businesses);
-        // put the jsonified data in state and set the loading state to false
+    // put the jsonified data in state and set the loading state to false
     setLoading(false);
   }
 
@@ -36,8 +36,8 @@ export default function YelpSearch() {
       <form onSubmit={handleYelpSubmit}>
         Search yelp for a city
         <input value={cityName} onChange={e => setCityName(e.target.value)}/>
-        <input value={state} onChange={e => setCountry(e.target.value)}/>
-        <input value={country} onChange={e => setState(e.target.value)}/>
+        <input value={country} onChange={e => setCountry(e.target.value)}/>
+        <input value={state} onChange={e => setState(e.target.value)}/>
         {/* add inputs/labels for city name, state, and country, using all the things we need with react forms. Don't forget to use the value property to sync these up with the default values in react state */}
         <button>Get yelp</button>
       </form>

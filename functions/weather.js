@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
     // here is an example from the netlify docs:
     // https://functions.netlify.com/playground/#hello%2C-%7Bname%7D 
 
-    // tragicly, we cannot just pass the city name to this API. it wants a latitude and longitude for the weather
+    // tragically, we cannot just pass the city name to this API. it wants a latitude and longitude for the weather
     // consult the yelp docs to figure out how to use a city, state, and country to make a request and get the latitude and longitude
     // https://openweathermap.org/api/geocoding-api
 
