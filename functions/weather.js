@@ -9,13 +9,6 @@ const headers = {
 
 exports.handler = async (event, context) => {
   try {
-    const response = await fetch(`https://api.yelp.com/v3/businesses/search?location=${event.queryStringParameters.searchFilter}`,
-    {
-      headers: {
-        'Authorization': 'Bearer RcjBe671yqiIsdchojn5KsYJ4ue_Vx9nxkyJTz-zUoIzTmudA7KSL6Yg3zCDpqJtZw9rpg4q0w_JfpnLv6apvatQwyZxwSWxkCXyIBDMw9sT7fr2NfGlqJTMxx2EYnYx'
-      },
-    });
-    const data = await response.json();
     // grab the city, state, and country from the request's query parameters
     // here is an example from the netlify docs:
     // https://functions.netlify.com/playground/#hello%2C-%7Bname%7D 
