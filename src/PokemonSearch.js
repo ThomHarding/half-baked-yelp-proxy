@@ -5,17 +5,20 @@ import { getPokemon } from './services/fetch-utils';
 
 export default function PokemonSearch() {
   const [pokemonSearch, setPokemonSearch] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState('pikachu');
-      // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
+  // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
 
   async function load() {
+    // console.log('start of load');
+    // console.log(loading);
     const response = await getPokemon(name);
     // put the jsonified data in state and set the loading state to false
     setPokemonSearch(response.data.results);
-    console.log(pokemonSearch);
+    // console.log(pokemonSearch);
     setLoading(false);
-    console.log(loading);
+    // console.log(loading);
+    // console.log('end of load');
   }
 
   useEffect(() => {
@@ -39,7 +42,7 @@ export default function PokemonSearch() {
         {/* add inputs/labels for name, using all the things we need with react forms. Don't forget to use the value property to sync these up with the default values in react state */}
         <button>Get pokemon</button>
       </form>
-      {loading ? <PokemonList pokemonSearch={pokemonSearch}/> : <Spinner />}
+      {loading ? <Spinner /> : <PokemonList pokemonSearch={pokemonSearch}/>}
       {/* Make a PokemonList component to import and use here. Use a ternary to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
     </section>
   );

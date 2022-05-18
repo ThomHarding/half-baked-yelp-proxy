@@ -1,8 +1,8 @@
-export default function PokemonItem(pokemonItem) {
+export default function PokemonItem({ pokemon }) {
   return (
     <div className='pokemon item'>
-      <p>{pokemonItem.name}</p>
-      <img src={pokemonItem.urlImage} />
+      <p>{pokemon.pokemon}</p>
+      <img src={pokemon.url_image} />
     </div>
   );
 }
