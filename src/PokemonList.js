@@ -1,10 +1,11 @@
 import PokemonItem from './PokemonItem';
 
-export default function PokemonList(pokemonList) {
+export default function PokemonList({ pokemonSearch }) {
+  console.log(pokemonSearch);
   return (
     <div className='list'>
       { 
-        pokemonList.map(pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon} />
+        pokemonSearch.map(pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon} />
         )
       }
     </div>

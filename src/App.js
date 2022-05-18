@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <PokemonSearch />
-      {/* <YelpSearch /> */}
+      <YelpSearch />
       { /* stretch goal: <WeatherSearch /> */ }
     </div>
   );
