@@ -1,10 +1,10 @@
 import BusinessItem from './BusinessItem';
 
-export default function BusinessList(businessList) {
+export default function BusinessList({ yelpSearch }) {
   return (
     <div className='list'>
       { 
-        businessList.map(business => <BusinessItem key={business.id} business={business} />
+        yelpSearch.map(business => <BusinessItem key={business.id} businessItem={business} />
         )
       }
     </div>

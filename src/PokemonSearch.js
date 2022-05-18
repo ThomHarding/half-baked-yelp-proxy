@@ -10,15 +10,10 @@ export default function PokemonSearch() {
   // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
 
   async function load() {
-    // console.log('start of load');
-    // console.log(loading);
     const response = await getPokemon(name);
     // put the jsonified data in state and set the loading state to false
     setPokemonSearch(response.data.results);
-    // console.log(pokemonSearch);
     setLoading(false);
-    // console.log(loading);
-    // console.log('end of load');
   }
 
   useEffect(() => {
